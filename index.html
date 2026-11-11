@@ -506,6 +506,101 @@
         .svc-check.gold { background: var(--gold-light); color: var(--gold); }
 
         /* ═══════════════════════════════════════
+           RESTAURANT GROWTH
+           ═══════════════════════════════════════ */
+        #growth { background: var(--navy); }
+        #growth .section-eyebrow { color: var(--green-light); }
+        #growth .section-heading { color: var(--white); }
+        #growth .section-subtext { color: var(--gray-300); max-width: 620px; }
+        .growth-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+        .growth-card {
+            background: var(--navy-mid);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 34px 32px 30px;
+        }
+        .growth-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: rgba(34,168,90,0.14);
+            color: var(--green-light);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        .growth-icon svg { width: 24px; height: 24px; }
+        .growth-card h3 {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+        .growth-card > p {
+            font-size: 15px;
+            line-height: 1.65;
+            color: var(--gray-300);
+            margin-bottom: 20px;
+        }
+        .growth-list {
+            list-style: none;
+            display: flex; flex-direction: column; gap: 10px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .growth-list li {
+            font-size: 14px;
+            color: var(--gray-200);
+            display: flex; align-items: flex-start; gap: 10px;
+            line-height: 1.5;
+        }
+        .growth-list li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--green-light);
+            margin-top: 8px;
+        }
+        .growth-cta {
+            margin-top: 40px;
+            padding: 32px 36px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 24px; flex-wrap: wrap;
+        }
+        .growth-cta h3 {
+            font-family: var(--font-display);
+            font-size: 22px; font-weight: 600;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+        .growth-cta p { font-size: 15px; color: var(--gray-300); line-height: 1.6; }
+        .growth-cta-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--green);
+            color: var(--white);
+            font-weight: 600; font-size: 15px;
+            padding: 14px 26px;
+            border-radius: 10px;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .growth-cta-btn:hover { background: var(--green-light); }
+        @media (max-width: 768px) {
+            .growth-grid { grid-template-columns: 1fr; }
+            .growth-card { padding: 28px 24px 24px; }
+            .growth-cta { padding: 26px 24px; }
+            .growth-cta-btn { width: 100%; justify-content: center; white-space: normal; }
+        }
+
+        /* ═══════════════════════════════════════
            WHO WE SERVE (replaces fake case studies)
            ═══════════════════════════════════════ */
         #industries {
@@ -1158,6 +1253,7 @@
             .process-track { grid-template-columns: 1fr; gap: 24px; }
             .form-row { grid-template-columns: 1fr; }
             .footer-top { flex-direction: column; gap: 20px; }
+            .footer-nav { flex-wrap: wrap; gap: 12px 24px; }
             .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
             .cred-inner { gap: 20px; }
             .cred-divider { display: none; }
@@ -1175,6 +1271,7 @@
         </a>
         <ul class="nav-menu">
             <li><a href="#services">Services</a></li>
+            <li><a href="#growth">Restaurants</a></li>
             <li><a href="#industries">Industries</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#process">Process</a></li>
@@ -1310,6 +1407,67 @@
                     <li><span class="svc-check gold">✓</span>Team training &amp; process documentation</li>
                 </ul>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ RESTAURANT GROWTH ═══ -->
+<section class="section" id="growth">
+    <div class="section-container">
+        <div class="section-header-center">
+            <span class="section-eyebrow">Restaurant Growth</span>
+            <h2 class="section-heading">Funding and Tools to Grow Your Restaurant</h2>
+            <p class="section-subtext">We connect restaurant and bar owners with growth capital and the operational upgrades that protect their margins. One conversation covers all of it.</p>
+        </div>
+        <div class="growth-grid">
+            <div class="growth-card reveal delay-1">
+                <div class="growth-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"/><path d="M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <h3>Growth Funding</h3>
+                <p>Get capital for renovations, equipment, marketing or inventory without taking on a loan. Funding is repaid through dining credits, not monthly payments.</p>
+                <ul class="growth-list">
+                    <li>Around $30K upfront on average</li>
+                    <li>Approval decisions within 24 hours</li>
+                    <li>No loan and no interest</li>
+                    <li>$100K+ possible in a second round</li>
+                </ul>
+            </div>
+            <div class="growth-card reveal delay-2">
+                <div class="growth-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></div>
+                <h3>Lower Card Processing Costs</h3>
+                <p>Card fees come out of every ticket. We review your current statement, show you what you should be paying, and set you up with a lower-cost option if it makes sense.</p>
+                <ul class="growth-list">
+                    <li>Free review of your processing statement</li>
+                    <li>Clear, upfront pricing</li>
+                    <li>Help with the switchover</li>
+                </ul>
+            </div>
+            <div class="growth-card reveal delay-3">
+                <div class="growth-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14l2 2 4-4"/><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+                <h3>Tip Credit Recovery</h3>
+                <p>If your staff earns tips, you may be owed a federal tax credit on the employer FICA you paid on those tips. We find out what you qualify for and handle the claim.</p>
+                <ul class="growth-list">
+                    <li>For restaurants and bars with tipped staff</li>
+                    <li>Performance-based, no upfront cost</li>
+                    <li>Can include prior tax years</li>
+                </ul>
+            </div>
+            <div class="growth-card reveal delay-3">
+                <div class="growth-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+                <h3>Online Ordering &amp; Reputation</h3>
+                <p>More covers start with how guests find you and how they order. We help you add direct online ordering and raise your Google rating.</p>
+                <ul class="growth-list">
+                    <li>Direct ordering without third-party commissions</li>
+                    <li>Google review and rating strategy</li>
+                    <li>Bring guests back to order direct</li>
+                </ul>
+            </div>
+        </div>
+        <div class="growth-cta">
+            <div>
+                <h3>See what your restaurant qualifies for</h3>
+                <p>Tell us a little about your business and we'll point you to what fits.</p>
+            </div>
+            <a class="growth-cta-btn" href="mailto:ed@laedenenterprise.com?subject=Restaurant%20Growth%20Inquiry">Email ed@laedenenterprise.com</a>
         </div>
     </div>
 </section>
@@ -1590,6 +1748,7 @@
             </div>
             <ul class="footer-nav">
                 <li><a href="#services">Services</a></li>
+                <li><a href="#growth">Restaurants</a></li>
                 <li><a href="#industries">Industries</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#process">How It Works</a></li>
