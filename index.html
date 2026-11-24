@@ -801,6 +801,85 @@
         }
 
         /* ═══════════════════════════════════════
+           TESTIMONIALS
+           ═══════════════════════════════════════ */
+        #testimonials {
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+        }
+        #testimonials .section-header-center {
+            margin-bottom: 40px;
+        }
+        .testimonial-card {
+            position: relative;
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--cream);
+            border: 1px solid var(--gray-200);
+            border-left: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 48px 56px 40px;
+            box-shadow: var(--shadow-md);
+        }
+        .testimonial-mark {
+            position: absolute;
+            top: 6px;
+            left: 28px;
+            font-family: var(--font-display);
+            font-size: 96px;
+            line-height: 1;
+            color: var(--gold);
+            opacity: 0.35;
+        }
+        .testimonial-quote {
+            position: relative;
+            font-family: var(--font-display);
+            font-size: 22px;
+            line-height: 1.6;
+            color: var(--navy);
+            margin: 0 0 28px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold-light);
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .testimonial-name {
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 16px;
+        }
+        .testimonial-role {
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+        .testimonial-role a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+        .testimonial-role a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .testimonial-card { padding: 40px 24px 28px; }
+            .testimonial-mark { left: 16px; font-size: 72px; }
+            .testimonial-quote { font-size: 18px; }
+        }
+
+        /* ═══════════════════════════════════════
            PROCESS / HOW IT WORKS
            ═══════════════════════════════════════ */
         #process {
@@ -1597,6 +1676,27 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section" id="testimonials">
+    <div class="section-container">
+        <div class="section-header-center">
+            <span class="section-eyebrow">Client Feedback</span>
+            <h2 class="section-heading">What Clients Say</h2>
+        </div>
+        <figure class="testimonial-card reveal delay-1">
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="testimonial-quote">Ed is such an expert at what he does. He set up our entire social media and paid social campaign and increased our brand awareness immediately, but most importantly he taught us how to create campaigns on our own. I'm forever grateful for his help.</blockquote>
+            <figcaption class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">CB</div>
+                <div>
+                    <div class="testimonial-name">Chef B</div>
+                    <div class="testimonial-role">Co-owner, <a href="https://alovekitchen.com" target="_blank" rel="noopener">A's Love Kitchen</a> &middot; Hammond, IN</div>
+                </div>
+            </figcaption>
+        </figure>
     </div>
 </section>
 
